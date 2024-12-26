@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="/stylesheets/style.css" /> -->
+    <title>Edit <%= blog.title %> Blog</title>
+</head>
+
+<body>
+    <h1>Edit <%= blog.title %> Blog</h1>
+    <div>
+        <form action="/<%= blog._id %>?_method=PUT" method="POST">
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title" value="<%= blog.title %>"/>
+                <div>
+                    <label for="description">Description:</label>
+                    <input type="text" name="description" id="description" value="<%= blog.description %>" />
+                </div>
+                
+                <div>
+                    <label for="body">Body:</label>
+                    <textarea id="body" name="body" required minLength="10" maxLength="500"> <%= blog.body %>" </textarea>
+                </div>
+                <button type="submit">Update Blog</button>
+        </form>
+    </div>
+    
+
+</body>
+
+</html>

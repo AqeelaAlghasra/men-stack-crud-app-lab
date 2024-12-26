@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="/stylesheets/style.css" /> -->
+    <title>Aqeela's Blog</title>
+  </head>
+  <body>
+    <h1>Welcome to My Blog!</h1>
+
+    <div class="blogs">
+      <a  href="/blogs/new">Add new Blog</a>
+      <ul>
+        <% if(blogs.length >0){ %>
+          <% blogs.forEach(blog => { %>
+            <li><a href="/<%= blog._id %>">
+    
+            <%= blog.title %></a></li>
+          <% }); %>
+        <% } %>
+      </ul>
+    </div>
+  </body>
+  
+</html>
