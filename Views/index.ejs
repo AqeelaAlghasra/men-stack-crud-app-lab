@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="/stylesheets/style.css" /> -->
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Aqeela's Blog</title>
   </head>
   <body>
@@ -15,10 +15,11 @@
         <% if(blogs.length >0){ %>
           <% blogs.forEach(blog => { %>
             <li><a href="/<%= blog._id %>">
-    
-            <%= blog.title %></a></li>
+            <%= blog.title %></a> <img class="index-img" src="/images/<%= blog.image %>"  alt="<%= blog.description %>"></li>
+
           <% }); %>
         <% } %>
+
       </ul>
     </div>
   </body>
